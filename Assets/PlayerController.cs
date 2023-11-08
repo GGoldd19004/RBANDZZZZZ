@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     {
         thisAnim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
-
     }
 
     // Update is called once per frame
