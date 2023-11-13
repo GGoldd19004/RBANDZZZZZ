@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Clipboard : MonoBehaviour
 {
@@ -9,8 +10,14 @@ public class Clipboard : MonoBehaviour
         if (playerInventory != null)
         {
             playerInventory.ClipboardCollected();
-            gameObject.SetActive(false);
+            StartCoroutine(goAway());
+            GetComponent<AudioSource>().Play();
         }
+    }
+    private IEnumerator goAway()
+    {
+        yield return new WaitForSeconds(1.0f);
+        gameObject.SetActive(false);
     }
 }
 

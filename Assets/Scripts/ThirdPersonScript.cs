@@ -29,10 +29,9 @@ public class ThirdPersonScript : MonoBehaviour
     {
        senseVariable = PlayerPrefs.GetFloat("Sensitivity");
        volume = PlayerPrefs.GetFloat("Volume");
-       Debug.Log(senseVariable.ToString());
        trueSpeed = walkSpeed;
        anim = GetComponentInChildren<Animator>();
-        Cursor.lockState = CursorLockMode.Locked;
+       Cursor.lockState = CursorLockMode.Locked;
        Cursor.visible = false;
     }
 
